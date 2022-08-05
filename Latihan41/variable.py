@@ -1,0 +1,1 @@
+data = "Arvie Ganteng banget"
