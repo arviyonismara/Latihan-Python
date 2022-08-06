@@ -6,6 +6,9 @@ class hero():
 		self.armor = inputArmor
 		self.strength = inputStrength
 		self.health = inputHealth
+# cara sebelumnya
+# hero1.nama = "sniper"
+# hero1.health = 300
 
 hero1 = hero("Sniper", 85, 70, 90, 250)
 hero2 = hero("Nigge", 60, 75, 85, 320)
