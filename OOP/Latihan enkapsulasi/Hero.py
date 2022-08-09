@@ -20,15 +20,15 @@ class Hero:
 
 	@property
 	def info(self):
-		return "name {} : \n\thealth : {}/{} \n\tattack : {} \n\tarmour : {}".format(self.__name, self.__health,self.__healthMax, self.__power, self.__armour)
+		return "{} level {} : \n\thealth : {}/{} \n\tattack : {} \n\tarmour : {}".format(self.__name,self.__level, self.__health,self.__healthMax, self.__power, self.__armour)
 
 	@property
 	def gainExp(self):
 		pass
 
-	@gainExp.getter
+	@gainExp.setter
 	def gainExp(self,addExp):
-		self.exp += addExp
+		self.__exp += addExp
 		if(self.__exp >= 100):
 			print(self.__name, "level up")
 			self.__level += 1
@@ -38,9 +38,17 @@ class Hero:
 			self.__power = self.__powerStandar * self.__level
 			self.__armour = self.__armourStandar * self.__level
 
+	def attack(self,musuh):
+		self.gainExp = 50
 
 Balmond = Hero("Balmond", 400, 20, 10)
+Jett = Hero("Jett", 300, 10, 25)
 print(Balmond.info)
 
 Balmond.gainExp = 50
-print(standar.info)
+Balmond.gainExp = 70
+Balmond.attack(Jett)
+Balmond.attack(Jett)
+Balmond.attack(Jett)
+
+print(Balmond.info)
