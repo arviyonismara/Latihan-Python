@@ -50,5 +50,6 @@ Balmond.gainExp = 70
 Balmond.attack(Jett)
 Balmond.attack(Jett)
 Balmond.attack(Jett)
+print(Jett.info)
 
 print(Balmond.info)
