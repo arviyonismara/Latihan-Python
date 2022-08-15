@@ -20,7 +20,12 @@ class Hero:
 
 	@property
 	def info(self):
-		return "{} level {} : \n\thealth : {}/{} \n\tattack : {} \n\tarmour : {}".format(self.__name,self.__level, self.__health,self.__healthMax, self.__power, self.__armour)
+		return "{} level {} : \n\thealth : {}/{} \n\tattack : {} \n\tarmour : {}".format(self.__name,
+		self.__level,
+		self.__health,
+		self.__healthMax,
+		self.__power,
+		self.__armour)
 
 	@property
 	def gainExp(self):
@@ -76,7 +81,7 @@ while True:
 			print("your hero = Balmond\n")
 			print(Balmond.info)
 			while True:
-				play = input("do you want to attack jett? Y/N\n")
+				play = input("do you want to attack jett? (Y/N)\n")
 				if play == "y":
 					Balmond.serang(Jett)
 				elif play == "n":
@@ -85,7 +90,7 @@ while True:
 			print("your hero = Jett\n")
 			print(Jett.info)
 			while True:
-				play = input("do you want to attack Balmond? Y/N")
+				play = input("do you want to attack Balmond? (Y/N)\n")
 				if play == "y":
 					Jett.serang(Balmond)
 				elif play == "n":
